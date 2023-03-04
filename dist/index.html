@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div id="recipe">
+        <input type="text" id="ingredient-input" placeholder="ingredient" />
+        <input type="text" id="contain-input" placeholder="contain" />
+        <button onclick=fetchData()>search</button>
+    </div>
+
+    <div id="recipes"></div>
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each Recipes}}
+         <p class="name">{{title}}</p>
+         <button id={{idMeal}} name={{ingredients}} onclick=exa(this.name,this.id)>
+            <img src={{thumbnail}} width = "150" height = "150" alt="buttonpng" border="0" />
+          </button>
+         <a href={{href}}>video</a>
+         <p class="name">{{ingredients}}</p>
+                    </div>
+        {{/each}}
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
