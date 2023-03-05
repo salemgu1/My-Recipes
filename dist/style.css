@@ -5,6 +5,9 @@
 body{
     background-color: #ffc048;
 }
+.pagination {
+    display: inline-block;
+  }
 
 #new-wonder{
     display: grid;
